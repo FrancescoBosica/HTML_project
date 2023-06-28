@@ -1,0 +1,181 @@
+<!DOCTTPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="keywords" content="python, documentation">
+<meta name="author" content="Francesco Bosica">
+    <title>Python</title>
+  </head>
+  <body>
+    <nav id ="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduzione">Introduzione</a>
+        </li>
+        <li> 
+          <a class="nav-link" href="#Perchè_usare_python">Perchè usare python</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Interprete">Interprete</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Funzioni_print_input">Funzioni Print Input</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Indentazione">Indentazione</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Stringhe_python">Stringhe python</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Riferimento">Riferimento</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduzione">
+        <header>Introduzione</header>
+        <article>
+          <p>Python è uno dei linguaggi di programmazione più usati al mondo. Grazie alla sua sintassi asciutta e potente, ed al supporto multipiattaforma, è utilizzato per moltissime tipologie di applicazioni, dal networking, al web, fino al machine learning.</p>
+          <p>
+            Nel 2000 Van Rossum e il suo team si trasferiscono presso BeOpen.com e formano i BeOpen PythonLabs team, con Python giunto alla versione 1.6. Poco tempo dopo viene rilasciata la versione 2.0, che, tra le altre cose, migliorava il linguaggio con l'aggiunta delle “list comprehension“.
+
+Nel 2001 viene rilasciato Python 2.1, e ridefinita la licenza come “Python Software Foundation License”. Python 2.2 fu considerato un “rilascio puliza”, e la principale novità introdotta riguardò l’unificazione dei tipi/classi.
+
+Bisogna arrivare al Dicembre 2008 per assistere ad una vera rivoluzione, con il rilascio della versione 3.0 di Python (o “Python 3000” o “Py3k”). Questa nuova versione è molto simile alla precedente, ma ha semplificato il linguaggio e introdotto diversi miglioramenti (come ad esempio le stringhe Unicode di default). Per via di questi cambiamenti, come vedremo in questa guida, Python 3 non è compatibile con Python 2.
+
+Al momento della scrittura di questa guida, ci sono stati altri 5 rilasci di Python 3 (fino ad arrivare a Python 3.5), che hanno aggiunto ulteriori funzionalità e nuovi moduli. L'ultima versione di Python 2 è invece Python 2.7, che ormai riceve solo bug fix.
+            </p>
+            </article>
+          </section>
+          <section class="main-section" id="Perchè_usare_python">
+             <header>Perchè usare python</header>
+             <article>
+            <p>
+              <p>
+              È free
+              </p>
+Python è completamente gratuito ed è possibile usarlo e distribuirlo senza restrizioni di copyright. Nonostante sia free, da oltre 25 anni Python ha una comunità molto attiva, e riceve costantemente miglioramenti che lo mantengono aggiornato e al passo coi tempi.
+            </p>
+            <p>
+              <p>
+È multi-paradigma
+                </p>
+Python è un linguaggio multi-paradigma, che supporta sia la programmazione procedurale (che fa uso delle funzioni), sia la programmazione ad oggetti (includendo funzionalità come l'ereditarietà singola e multipla, l'overloading degli operatori, e il duck typing). Inoltre supporta anche diversi elementi della programmazione funzionale (come iteratori e generatori).
+          </p> 
+          <p>
+            <p>
+È portabile
+              </p>
+Python è un linguaggio portabile sviluppato in ANSI C. È possibile usarlo su diverse piattaforme come: Unix, Linux, Windows, DOS, Macintosh, Sistemi Real Time, OS/2, cellulari Android e iOS. Ciò è possibile perché si tratta di un linguaggio interpretato, quindi lo stesso codice può essere eseguito su qualsiasi piattaforma purché abbia l’interprete Python installato.
+          </p>
+          <p>
+            <p>
+È facile da usare
+            </p>
+Python è un linguaggio di alto livello che è al tempo stesso semplice e potente. La sintassi e i diversi moduli e funzioni che sono già inclusi nel linguaggio sono consistenti, intuitivi, e facili da imparare, e il design del linguaggio si basa sul principio del least astonishment (cioè della "minor sorpresa": il comportamento del programma coincide con quanto ci si aspetta).
+            </p>
+            <p>
+              <p>
+È ricco di librerie
+            </p>
+Ogni installazione di Python include la standard library, cioè una collezione di oltre 200 moduli per svolgere i compiti più disparati, come ad esempio l'interazione con il sistema operativo e il filesystem, o la gestione di diversi protocolli. Inoltre, il Python Package Index consente di scaricare ed installare migliaia di moduli aggiuntivi creati e mantenuti dalla comunità.
+            </p>
+            <p>
+              <p>
+È performante
+              </p>
+Anche se Python è considerato un linguaggio interpretato, i programmi vengono automaticamente compilati in un formato chiamato bytecode prima di essere eseguiti. Questo formato è più compatto ed efficiente, e garantisce quindi prestazione elevate. Inoltre, diverse strutture dati, funzioni, e moduli di Python sono implementati internamente in C per essere ancora più performanti.
+            </p>
+            <article>
+          </section>
+          <section class="main-section" id="Interprete">
+              <header>Interprete</header>
+              <article>
+                  <p> 
+                    L'interprete interattivo è in grado di leggere e valutare man mano le espressioni inserite dall'utente, ma è anche possibile eseguire script contenenti sequenze di istruzioni Python, digitando il comando:
+                    <code>
+                      python script.py
+                    </code>
+                  </p>
+                  <p>
+                    Esecuzione da riga di comando
+Torniamo a concentrarci sul funzionamento base dell’interprete interattivo. In questa modalità, digitando dei comandi Python si ottiene subito una risposta:
+  <code>
+    >>> 5 * 3
+15
+>>>
+>>> a = 5
+>>> b = 6
+>>> 2 * (a+b) + 3*a
+37
+  </code>
+                  </p>
+                </article>
+          </section>
+          <section class="main-section" id="Funzioni_print_input">
+              <header>Funzioni Print Input</header>
+              <article>
+                <p>
+                  La funzione print viene utilizzata per stampare a monitor le informazioni, la sintassi è la seguente:
+                  <code>
+                    print("hello world")
+                  </code
+                </p>
+                <p>
+                  La funzione input viene usata per consentire all'utente di immettere dati da tastiera, che verranno poi utilizzati dal programma.
+                  input accetta un singolo argomento opzionale: una stringa che viene mostrata a video prima di leggere il valore digitato. Una volta che l'utente ha digitato un valore e premuto il tasto Invio, input restituisce il valore come stringa, come mostra il seguente esempio:
+                </p> 
+                <code>
+                  >>> nome = input('Inserisci il tuo nome: ')
+                  Inserisci il tuo nome: Ezio
+                  >>> nome
+                  'Ezio'
+                </code>
+                In questo esempio possiamo vedere che:
+                <ul>
+                  <li>la stringa passata a input che chiede di inserire il nome viene mostrata a video;</li>
+                  <li>input attende che l'utente digiti il nome (Ezio) e prema Invio;</li>
+                  <li>input restituisce il nome inserito come stringa;</li>
+                  <li>la stringa restituita da input viene assegnata alla variabile nome;</li>
+                  <li>la variabile nome può poi essere utilizzata per accedere al nome inserito dall'utente.</li>
+                </ul>
+              </article>
+          </section>
+          <section class="main-section" id="Indentazione">
+            <header>Indentazione</header>
+            <article>
+              <p>
+                 A differenza di altri linguaggi che delimitano blocchi di codice con parentesi grafe (come C, C++ e Java) o con parole riservate come begin/end, Python usa l'indentazione. Indentare il codice è una pratica comune in tutti i linguaggi, perché semplifica la lettura del codice e la compresione della sua struttura. Anzichè usare due meccanismi separati per compilatori/interpreti (parentesi o keyword) e persone (indentazione), per Python si è scelto di usare l'indentazione per entrambi.  
+esempio di codice indentato:
+                <code>
+                   print("eseguito sempre all'inizio")
+if condizione:
+    print('eseguito in mezzo solo se la condizione è vera')
+    print('eseguito in mezzo solo se la condizione è vera')
+    print('eseguito in mezzo solo se la condizione è vera')
+print('eseguito sempre alla fine') 
+              </code>
+              </p>
+            </article>
+          </section>
+          <section class="main-section" id="Stringhe_python">
+            <header>Stringhe python</header>
+            <article>
+              <p>
+                Le stringhe, così come le liste o le tuple, sono un tipo particolare di sequenze e perciò supportano tutte le operazioni comuni alle sequenze.
+              </p>
+            </article>
+        </section>
+        <section class="main-section" id="Riferimento">
+          <header>Riferimento</header>
+          <article>
+            <p>Tutta la documentazione presente in questa pagina è stata presa da <a href="https://www.html.it/guide/guida-python/">HTML.it</a></p>
+          </article>
+        </section>
+    </main>
+  </body>
+</html>
