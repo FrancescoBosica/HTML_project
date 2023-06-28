@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+      Modulo di sondaggio
+    </title>
+    <meta name="author" content="Francesco Bosica">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Modulo di sondaggio</h1>
+    <p id="description">presentazione del progetto di certificazione</p>
+    <form id="survey-form">
+      <label id="name-label">
+        Name: <input id="name" type="text" placeholder="nome cognome" required/>
+      </label>
+      <label id="email-label">
+        Email: <input id="email" type="email" placeholder="nam123@ax.it" required/>
+      </label>
+      <label id="number-label">
+        age: (optional) <input id="number" type="number" min="10" max="99" placeholder="11"/>
+      </label>
+      <p>
+        quale scelta descrive meglio il tuo ruolo
+      </p> 
+        <select id="dropdown">
+          <option value="lavoratore">lavoratore</option>
+          <option value="studente">studente</option>
+          <option value="altro">altro</option>
+        </select>
+        <p>
+          che cosa ne pensi del mio progetto
+        </p>
+        <label>
+          <input name="scelta" type="radio" value="bello"/>bello
+        </label>
+        <label>
+          <input name="scelta" type="radio" value="brutto"/>brutto
+        </label>
+        <p>
+          cosa ti piacerebbe vedere migliorato
+        </p>
+        <label>
+          <input type="checkbox" value="grafica"> grafica
+        </label>
+        <label>
+          <input type="checkbox" value="sistemare elementi"> sistemare elementi
+        </label>
+        <p>inserisci altri consigli</p>
+        <textarea placeholder="potresti inserire..."></textarea>
+        <button id="submit">Submit</button>
+    </form>
+  </body>
+</html>
